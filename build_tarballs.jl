@@ -3,7 +3,7 @@
 using BinaryBuilder
 
 name = "LibSpatialIndexBuilder"
-version = v"0.0.0"
+version = v"1.8.5"
 
 # Collection of sources required to build LibSpatialIndexBuilder
 sources = [
