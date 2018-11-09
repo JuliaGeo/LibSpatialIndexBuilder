@@ -50,7 +50,7 @@ deploy:
     api_key:
         # Note; this api_key is only valid for MaximeBouton/LibSpatialIndexBuilder; you need
         # to make your own: https://docs.travis-ci.com/user/deployment/releases/
-	#secure:    
+        secure: WNWegAKl3+Vu0k0HrFiRWoJfdgpClchJI2j77tfYTWLhTFCyH3BrijvhLOmCtNTwAVinR1aFm4/MPS4agaRdtQaY5VQj2p77XPTxHoFunjafOh1UN1zayf4Pzm1IozFJIJZBmtWyg7gCxME5LajZLW9kp0gCElrZiFEhiqPlrhfyCTN9fErTkiEypj1uJor8A5TuEpo6kGWH/Xy8N+vRHAoE+sGGrMuW5J0OIAS+z9f7CsgfWqjBE3BXqOxdeuy+CMvs6CW4eBO1r1Ah09qxdTpJSd06Eu6SlDkJ+8nT2AL5ZczskmfdIgM8nDpxxkv73guyGHrcBKceOeDF379f29TgR7i3kQPm+zOE0Bbt0iXkb0eSceORTbOm9e56ZQtfmV5fK11s9N2xCeBd+Cd+t0xDPDxFM1vFBpP7NUYhqRwkT7ndY4JTB/EdDqS6nRxGDmd524gvfe5KYtGLvHUjG1RqV421/DZEM7vA/l9wq+AoljLYxb1VXS5Dw9ueCe8sgxdVYBTpO28A/rCzT33pUPAM4mx4RhszNK5udZ/jaYCGXB6fedf0S36nh75Eve1cv0LBYDGBY3VHkkXnN6OSnnUG/r2WKPUUvtv8L7mb9myyvZdGBtuybUA5wiUfj1vBbQfQjtLingnjE33VT9+oBwuwtyzZLMxzcii1PyCzuf8=
     file_glob: true
     file: products/*
     skip_cleanup: true
