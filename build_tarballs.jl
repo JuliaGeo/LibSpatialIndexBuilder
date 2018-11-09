@@ -19,28 +19,6 @@ cd spatialindex-src-1.8.5/
 ./configure --prefix=$prefix --host=$target
 make
 make install
-
-if [ $target = "x86_64-w64-mingw32" ]; then
-cd $WORKSPACE/srcdir
-ls
-cd ..
-ls
-cd destdir/
-ls
-cd bin/
-ls
-cd ..
-cd ..
-cd metadir/
-ls
-cd ../srcdir/
-ls
-cd spatialindex-src-1.8.5/
-ls
-exit
-
-fi
-
 """
 
 # These are the platforms we will build for by default, unless further
