@@ -14,7 +14,7 @@ sources = [
 # Bash recipe for building across all platforms
 script = raw"""
 cd $WORKSPACE/srcdir
-cd spatialindex-src-$version/
+cd spatialindex-src-1.8.5/
 ./configure --prefix=$prefix --host=$target
 make
 make install
