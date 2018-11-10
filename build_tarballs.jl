@@ -14,6 +14,10 @@ sources = [
 script = raw"""
 cd $WORKSPACE/srcdir
 cd spatialindex-src-1.8.5/
+
+# Show options in the log
+./configure --help
+
 ./configure --prefix=$prefix --host=$target
 make
 make install
