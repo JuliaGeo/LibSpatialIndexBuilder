@@ -18,7 +18,7 @@ cd spatialindex-src-1.8.5/
 # Show options in the log
 ./configure --help
 
-./configure --prefix=$prefix --target=$target
+./configure --prefix=$prefix --build=$target
 make
 make install
 """
