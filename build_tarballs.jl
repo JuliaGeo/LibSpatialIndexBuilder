@@ -2,7 +2,7 @@
 # `julia build_tarballs.jl --help` to see a usage message.
 using BinaryBuilder
 
-version = v"1.8.5"
+version = v"1.8.5" # also change in raw script string
 
 # Collection of sources required to build LibSpatialIndexBuilder
 sources = [
