@@ -8,12 +8,21 @@ version = v"1.8.5" # also change in raw script string
 sources = [
     "http://download.osgeo.org/libspatialindex/spatialindex-src-$version.tar.bz2" =>
     "31ec0a9305c3bd6b4ad60a5261cba5402366dd7d1969a8846099717778e9a50a",
+    "./patches"
 ]
 
 # Bash recipe for building across all platforms
 script = raw"""
 cd $WORKSPACE/srcdir
+
 cd spatialindex-src-1.8.5/
+
+patch < ${WORKSPACE}/srcdir/makefile.patch
+rm Makefile.am.orig
+
+if [ $target = "x86_64-w64-mingw32" ] || [ $target = "i686-w64-mingw32"]; then
+  patch < ${WORKSPACE}/srcdir/header-check.patch
+fi
 
 # Show options in the log
 ./configure --help
@@ -25,7 +34,7 @@ make install
 
 # These are the platforms we will build for by default, unless further
 # platforms are passed in on the command line
-platforms = supported_platforms()
+platforms = [Windows(:x86_64)] #supported_platforms()
 
 # The products that we will ensure are always built
 products(prefix) = [
