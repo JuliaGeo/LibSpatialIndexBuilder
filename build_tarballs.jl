@@ -20,11 +20,10 @@ cd spatialindex-src-1.8.5/
 patch < ${WORKSPACE}/srcdir/makefile.patch
 rm Makefile.am.orig
 
-if [ $target = "x86_64-w64-mingw32" ] || [ $target = "i686-w64-mingw32"]; then
+if [ $target = "x86_64-w64-mingw32" ] || [ $target = "i686-w64-mingw32" ]; then
   patch < ${WORKSPACE}/srcdir/header-check.patch
-  #aclocal
-  #autoconf
 fi
+
 aclocal
 autoconf
 automake --add-missing --foreign
