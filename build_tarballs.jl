@@ -22,7 +22,12 @@ rm Makefile.am.orig
 
 if [ $target = "x86_64-w64-mingw32" ] || [ $target = "i686-w64-mingw32"]; then
   patch < ${WORKSPACE}/srcdir/header-check.patch
+  #aclocal
+  #autoconf
 fi
+aclocal
+autoconf
+automake --add-missing --foreign
 
 # Show options in the log
 ./configure --help
@@ -34,7 +39,7 @@ make install
 
 # These are the platforms we will build for by default, unless further
 # platforms are passed in on the command line
-platforms = [Windows(:x86_64)] #supported_platforms()
+platforms = supported_platforms()
 
 # The products that we will ensure are always built
 products(prefix) = [
