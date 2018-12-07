@@ -1,4 +1,4 @@
-# LibSpatialIndexBuilder builder
+# LibSpatialIndexBuilder
 
 This repository builds binary artifacts for the LibSpatialIndexBuilder project.
 This repository has a default .travis.yml file that can be used to build
